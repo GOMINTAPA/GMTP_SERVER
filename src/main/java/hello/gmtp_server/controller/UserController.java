@@ -1,9 +1,8 @@
 package hello.gmtp_server.controller;
 
-import hello.gmtp_server.domain.User;
 import hello.gmtp_server.dto.user.request.UserRegisterRequest;
 import hello.gmtp_server.dto.user.response.UserListResponse;
-import hello.gmtp_server.service.UserService;
+import hello.gmtp_server.service.user.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

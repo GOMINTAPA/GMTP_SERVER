@@ -1,11 +1,14 @@
 package hello.gmtp_server.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import lombok.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Entity
+@Getter
 public class User {
 
     @Id
@@ -13,9 +16,7 @@ public class User {
     private Long id;
 
     private String identifier;
-
     private String password;
-
     private String nickName;
 
     public User() {
@@ -27,19 +28,4 @@ public class User {
         this.nickName = nickName;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public String getIdentifier() {
-        return identifier;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public String getNickName() {
-        return nickName;
-    }
 }

@@ -1,7 +1,7 @@
 package hello.gmtp_server.controller;
 
 import hello.gmtp_server.dto.feed.request.WriteFeedRequest;
-import hello.gmtp_server.service.FeedService;
+import hello.gmtp_server.service.feed.FeedService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;

@@ -1,15 +1,21 @@
-package hello.gmtp_server.service;
+package hello.gmtp_server.service.user;
 
 import hello.gmtp_server.domain.User;
 import hello.gmtp_server.domain.UserRepository;
 import hello.gmtp_server.dto.user.request.UserRegisterRequest;
 import hello.gmtp_server.dto.user.response.UserListResponse;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@Slf4j
 public class UserService {
 
     private final UserRepository userRepository;

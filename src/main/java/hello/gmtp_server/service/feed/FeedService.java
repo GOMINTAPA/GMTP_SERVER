@@ -1,4 +1,4 @@
-package hello.gmtp_server.service;
+package hello.gmtp_server.service.feed;
 
 import hello.gmtp_server.domain.Feed;
 import hello.gmtp_server.domain.FeedRepository;
