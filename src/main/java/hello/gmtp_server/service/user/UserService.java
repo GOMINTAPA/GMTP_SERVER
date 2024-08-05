@@ -9,6 +9,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -36,7 +39,7 @@ public class UserService {
     }
 
     public void registerUser(UserRegisterRequest request) {
-        User user = new User(request.getIdentifier(), request.getPassword(), request.getNickName());
+        User user = new User(request.getIdentifier(), request.getPassword(), request.getNickName(), null);
         userRepository.save(user);
     }
 }
