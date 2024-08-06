@@ -2,6 +2,7 @@ package hello.gmtp_server.service.feed;
 
 import hello.gmtp_server.domain.Feed;
 import hello.gmtp_server.domain.FeedRepository;
+import hello.gmtp_server.dto.feed.request.SolveFeedRequest;
 import hello.gmtp_server.dto.feed.request.VoteFeedRequest;
 import hello.gmtp_server.dto.feed.request.WriteFeedRequest;
 import hello.gmtp_server.dto.feed.response.FeedListResponse;
@@ -28,6 +29,12 @@ public class FeedService {
     public void voteFeed(VoteFeedRequest request) {
         Feed feed = feedRepository.findById(request.getFeedId()).orElseThrow(IllegalArgumentException::new);
         feed.setVoteNum();
+        feedRepository.save(feed);
+    }
+
+    public void solveFeed(SolveFeedRequest request) {
+        Feed feed = feedRepository.findById(request.getFeedId()).orElseThrow(IllegalArgumentException::new);
+        feed.setSolve();
         feedRepository.save(feed);
     }
 

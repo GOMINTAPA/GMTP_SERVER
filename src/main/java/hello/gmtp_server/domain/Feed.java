@@ -76,4 +76,8 @@ public class Feed {
     public void setVoteNum() {
         this.voteNum ++;
     }
+
+    public void setSolve() {
+        this.solve = true;
+    }
 }

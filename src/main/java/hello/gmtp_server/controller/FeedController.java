@@ -1,5 +1,6 @@
 package hello.gmtp_server.controller;
 
+import hello.gmtp_server.dto.feed.request.SolveFeedRequest;
 import hello.gmtp_server.dto.feed.request.VoteFeedRequest;
 import hello.gmtp_server.dto.feed.request.WriteFeedRequest;
 import hello.gmtp_server.dto.feed.response.FeedListResponse;
@@ -25,6 +26,11 @@ public class FeedController {
     @PutMapping("/feed/vote")
     public void voteFeed(@RequestBody VoteFeedRequest request) {
         feedService.voteFeed(request);
+    }
+
+    @PutMapping("/feed/solve")
+    public void solveFeed(@RequestBody SolveFeedRequest request) {
+        feedService.solveFeed(request);
     }
 
     @GetMapping("/feed/list")
