@@ -26,7 +26,9 @@ public class Feed {
 
     private boolean solve;
 
-    private int voteNum;
+    private int firstVoteNum;
+
+    private int secondVoteNum;
 
     public Feed() {
     }
@@ -69,12 +71,12 @@ public class Feed {
         return solve;
     }
 
-    public int getVoteNum() {
-        return voteNum;
+    public void setFirstVoteNum() {
+        this.firstVoteNum++;
     }
 
-    public void setVoteNum() {
-        this.voteNum ++;
+    public void setSecondVoteNum() {
+        this.secondVoteNum++;
     }
 
     public void setSolve() {

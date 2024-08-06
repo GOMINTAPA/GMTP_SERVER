@@ -28,7 +28,12 @@ public class FeedService {
 
     public void voteFeed(VoteFeedRequest request) {
         Feed feed = feedRepository.findById(request.getFeedId()).orElseThrow(IllegalArgumentException::new);
-        feed.setVoteNum();
+
+        if (request.getFeedNum().equals("1")) {
+            feed.setFirstVoteNum();
+        } else if (request.getFeedNum().equals("2")) {
+            feed.setSecondVoteNum();
+        }
         feedRepository.save(feed);
     }
 
