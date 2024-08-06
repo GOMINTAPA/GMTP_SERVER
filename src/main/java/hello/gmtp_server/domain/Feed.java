@@ -24,16 +24,21 @@ public class Feed {
 
     private String keyword;
 
+    private boolean solve;
+
+    private int voteNum;
+
     public Feed() {
     }
 
-    public Feed(String title, String content, String firstOption, String secondOption, int imageId, String keyword) {
+    public Feed(String title, String content, String firstOption, String secondOption, int imageId, String keyword, boolean solve) {
         this.title = title;
         this.content = content;
         this.firstOption = firstOption;
         this.secondOption = secondOption;
         this.imageId = imageId;
         this.keyword = keyword;
+        this.solve = solve;
     }
 
     public String getTitle() {
@@ -58,5 +63,17 @@ public class Feed {
 
     public String getKeyword() {
         return keyword;
+    }
+
+    public boolean isSolve() {
+        return solve;
+    }
+
+    public int getVoteNum() {
+        return voteNum;
+    }
+
+    public void setVoteNum() {
+        this.voteNum ++;
     }
 }

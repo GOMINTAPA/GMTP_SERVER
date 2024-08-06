@@ -8,6 +8,12 @@ public class WriteFeedRequest {
     String secondOption;
     int imageId;
     String keyword;
+    boolean solve;
+    int voteNum;
+
+    public boolean isSolve() {
+        return solve;
+    }
 
     public String getTitle() {
         return title;
@@ -31,5 +37,9 @@ public class WriteFeedRequest {
 
     public String getKeyword() {
         return keyword;
+    }
+
+    public int getVoteNum() {
+        return voteNum;
     }
 }
